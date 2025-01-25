@@ -57,6 +57,7 @@ const closeMenu = document.getElementById("closeMenu");
 
 // Toggle the menu visibility when the button is clicked
 issueButton.addEventListener("click", () => {
+    console.log("Issue button clicked!"); // Log to see if this triggers
     issueMenu.classList.add("open");
 });
 
@@ -70,6 +71,8 @@ document.querySelectorAll('.copy-btn').forEach(button => {
     button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-copy-target'); // Get target element ID
         const textToCopy = document.getElementById(targetId).innerText;
+
+        console.log("cpy button clicked!");
 
         // Copy text to clipboard
         navigator.clipboard.writeText(textToCopy).then(() => {
@@ -87,6 +90,8 @@ document.getElementById('takePhotoButton').addEventListener('click', function ()
     input.type = 'file';
     input.accept = 'image/*';
     input.capture = 'camera'; // Allows the user to take a photo (on supported devices)
+
+    console.log("take photo button clicked!");
 
     input.onchange = function (event) {
         const file = event.target.files[0];
@@ -109,6 +114,8 @@ document.getElementById('uploadPhotoButton').addEventListener('click', function 
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = 'image/*';
+
+    console.log("upload photo button clicked!");
 
     input.onchange = function (event) {
         const file = event.target.files[0];
@@ -133,13 +140,3 @@ function savePhoto(photoData) {
     // This could use Fetch API or XMLHttpRequest to send the data to a backend.
 }
 */
-
-document.getElementById('takePhotoButton').addEventListener('click', function () {
-    console.log('Take Photo button clicked');
-    // Your code here...
-});
-
-document.getElementById('uploadPhotoButton').addEventListener('click', function () {
-    console.log('Upload Photo button clicked');
-    // Your code here...
-});
