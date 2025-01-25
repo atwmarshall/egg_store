@@ -133,3 +133,13 @@ function savePhoto(photoData) {
     // This could use Fetch API or XMLHttpRequest to send the data to a backend.
 }
 */
+
+document.getElementById('takePhotoButton').addEventListener('click', function () {
+    console.log('Take Photo button clicked');
+    // Your code here...
+});
+
+document.getElementById('uploadPhotoButton').addEventListener('click', function () {
+    console.log('Upload Photo button clicked');
+    // Your code here...
+});
