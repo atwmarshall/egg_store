@@ -48,3 +48,20 @@ function openPopup(eggCount) {
 function closePopup() {
     document.getElementById("popup").style.display = 'none';
 }
+
+// for the issue raising button
+// Get references to the button and menu
+const issueButton = document.getElementById("issueButton");
+const issueMenu = document.getElementById("issueMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+// Toggle the menu visibility when the button is clicked
+issueButton.addEventListener("click", () => {
+    issueMenu.classList.add("open");
+});
+
+// Close the menu when the close button is clicked
+closeMenu.addEventListener("click", () => {
+    issueMenu.classList.remove("open");
+});
+
