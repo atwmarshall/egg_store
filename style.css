@@ -92,6 +92,20 @@ button:active {
     background-color: #00468c;
 }
 
+.payment-method {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.payment-method input {
+    margin-right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
 .popup {
     display: none;
     position: fixed;

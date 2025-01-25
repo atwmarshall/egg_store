@@ -4,21 +4,39 @@ document.getElementById("purchaseForm").addEventListener("submit", function (eve
     // Get the number of eggs selected
     const eggCount = document.getElementById("eggCount").value;
 
-    // Get the card details (for form autofill)
-    const cardName = document.getElementById("cardName").value;
-    const cardNumber = document.getElementById("cardNumber").value;
-    const expiryDate = document.getElementById("expiryDate").value;
-    const cvv = document.getElementById("cvv").value;
+    // Get the payment details based on the selected payment method
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
 
     // Simple validation (to ensure all fields are filled)
-    if (!cardName || !cardNumber || !expiryDate || !cvv) {
-        alert("Please fill in all the fields!");
-        return;
+    if (paymentMethod === "card") {
+        const cardName = document.getElementById("cardName").value;
+        const cardNumber = document.getElementById("cardNumber").value;
+        const expiryDate = document.getElementById("expiryDate").value;
+        const cvv = document.getElementById("cvv").value;
+
+        if (!cardName || !cardNumber || !expiryDate || !cvv) {
+            alert("Please fill in all the fields!");
+            return;
+        }
     }
 
     // Simulate redirect to the 'thank you' page
     window.location.href = "thankyou.html?eggs=" + eggCount;
 });
+
+// Toggle between payment methods (Card vs Bank Transfer)
+function togglePaymentMethod() {
+    const cardDetails = document.getElementById("cardDetails");
+    const bankDetails = document.getElementById("bankDetails");
+
+    if (document.getElementById("cardPayment").checked) {
+        cardDetails.classList.remove("hidden");
+        bankDetails.classList.add("hidden");
+    } else {
+        cardDetails.classList.add("hidden");
+        bankDetails.classList.remove("hidden");
+    }
+}
 
 // Open the popup
 function openPopup(eggCount) {
