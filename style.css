@@ -98,19 +98,19 @@ button:active {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
     margin-bottom: 20px;
 }
 
 .payment-method input {
-    margin-right: 10px;
+    margin-right: 3px;
 }
 
 /* Individual radio button with label */
 .radio-option {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
 }
 
 /* Adjust font size for smaller screens */
