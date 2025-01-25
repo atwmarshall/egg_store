@@ -93,9 +93,12 @@ button:active {
     background-color: #00468c;
 }
 
+/* Payment method radio button container */
 .payment-method {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
@@ -103,6 +106,21 @@ button:active {
     margin-right: 10px;
 }
 
+/* Individual radio button with label */
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 768px) {
+    .radio-option label {
+        font-size: 14px;
+    }
+}
+
+/*che.*/
 .hidden {
     display: none;
 }

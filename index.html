@@ -22,14 +22,16 @@
 
             <!-- Payment Method Toggle -->
             <div class="payment-method">
-                <input type="radio" id="cardPayment" name="paymentMethod" value="card" checked
-                    onclick="togglePaymentMethod()">
-                <label for="cardPayment">Card Payment</label>
-
-                <input type="radio" id="bankTransfer" name="paymentMethod" value="bank" onclick="togglePaymentMethod()">
-                <label for="bankTransfer">Bank Transfer</label>
+                <div class="radio-option">
+                    <input type="radio" id="cardPayment" name="payment" value="card" checked onclick="togglePaymentMethod()">
+                    <label for="cardPayment">Card Payment</label>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" id="bankTransfer" name="payment" value="bank" onclick="togglePaymentMethod()">
+                    <label for="bankTransfer">Bank Transfer</label>
+                </div>
             </div>
-
+            
             <!-- Card Payment Details (hidden when Bank Transfer is selected) -->
             <div id="cardDetails">
                 <fieldset>
