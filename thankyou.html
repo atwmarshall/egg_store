@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Thank You for Your Purchase!</h1>
+        <p id="thankYouMessage"></p>
+        <button onclick="window.history.back()">Go Back</button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const eggCount = urlParams.get('eggs');
+        document.getElementById("thankYouMessage").textContent = `Thank you for buying ${eggCount} eggs.`;
+
+        // Open popup on this page as well
+        openPopup(eggCount);
+    </script>
+</body>
+
+</html>
