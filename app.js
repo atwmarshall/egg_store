@@ -65,3 +65,17 @@ closeMenu.addEventListener("click", () => {
     issueMenu.classList.remove("open");
 });
 
+// Add copy functionality for all copy buttons
+document.querySelectorAll('.copy-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-copy-target'); // Get target element ID
+        const textToCopy = document.getElementById(targetId).innerText;
+
+        // Copy text to clipboard
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            alert('Copied: ' + textToCopy);
+        }).catch(err => {
+            alert('Failed to copy text: ' + err);
+        });
+    });
+});

@@ -55,8 +55,27 @@
             <!-- Bank Transfer Details (hidden when Card Payment is selected) -->
             <div id="bankDetails" class="hidden">
                 <fieldset>
-                    <legend>Bank Transfer</legend>
-                    <p>Acc No. 01234567, Sort code 01/02/03</p>
+                    <div class="copy-item">
+                        <span>Acc No.: </span>
+                        <span id="account-number">01234567</span>
+                        <button class="copy-btn" data-copy-target="account-number" title="Copy account number">
+                            &#128203;
+                        </button>
+                    </div>
+                    <div class="copy-item">
+                        <span>Sort Code: </span>
+                        <span id="sort-code">01/02/03</span>
+                        <button class="copy-btn" data-copy-target="sort-code" title="Copy sort code">
+                            &#128203;
+                        </button>
+                    </div>
+                    <div class="copy-item">
+                        <span>Reference: </span>
+                        <span id="reference-text">KiranEggStore</span>
+                        <button class="copy-btn" data-copy-target="reference-text" title="Copy reference">
+                            &#128203;
+                        </button>
+                    </div>
                 </fieldset>
             </div>
 

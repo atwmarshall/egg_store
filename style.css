@@ -245,3 +245,39 @@ button:active {
 .issue-menu.open {
     right: 0;
 }
+
+/*copy button formats*/
+.copy-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copy-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.copy-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.copy-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
