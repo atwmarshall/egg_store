@@ -79,3 +79,57 @@ document.querySelectorAll('.copy-btn').forEach(button => {
         });
     });
 });
+
+
+// Handle Take a Photo button click
+document.getElementById('takePhotoButton').addEventListener('click', function () {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.capture = 'camera'; // Allows the user to take a photo (on supported devices)
+
+    input.onchange = function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            // Preview the image
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('photoPreview').src = e.target.result;
+                document.getElementById('photoPreviewContainer').classList.remove('hidden');
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    input.click(); // Open the camera interface for the user
+});
+
+// Handle Upload a Photo button click
+document.getElementById('uploadPhotoButton').addEventListener('click', function () {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+
+    input.onchange = function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            // Preview the image
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('photoPreview').src = e.target.result;
+                document.getElementById('photoPreviewContainer').classList.remove('hidden');
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    input.click(); // Open the file selector
+});
+
+// Placeholder for code to save the photo if needed (e.g., uploading to a server)
+/*
+function savePhoto(photoData) {
+    // Code to save the photo, e.g., upload to a server or cloud storage
+    // This could use Fetch API or XMLHttpRequest to send the data to a backend.
+}
+*/
