@@ -73,7 +73,7 @@ document.querySelectorAll('.copy-btn').forEach(button => {
 
         // Copy text to clipboard
         navigator.clipboard.writeText(textToCopy).then(() => {
-            alert('Copied: ' + textToCopy);
+            // alert('Copied: ' + textToCopy);
         }).catch(err => {
             alert('Failed to copy text: ' + err);
         });
